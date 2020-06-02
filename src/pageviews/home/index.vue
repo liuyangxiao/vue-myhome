@@ -1,37 +1,26 @@
 <template>
-    <div class="bg">
-        <!-- <el-image
-                 style="width: 100%"
-                 :src="b_url"/>-->
-        Home
+    <div class="grad">
+        <Head/>
+        <router-view/>
     </div>
 </template>
 
 <script>
+    import Head from './HealdView'
+
     export default {
         name: "index",
+        components: {
+            Head
+        },
         data() {
-            return {
-                b_url: require('../../assets/mainbg.jpg'),
-                bwtlogo_url: "https://dist-sandbox.bzzworld.com/static/bzzworld/frontend-view/icons/bwt-icon.png"
-            }
+            return {}
         }
     }
 </script>
 
 <style scoped>
-    .bg {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: red;
-        background-image: url('../../assets/mainbg.jpg');
-        background-size: 100% 100%;
-        background-attachment: fixed;
-        margin: 0;
-        padding: 0;
+    .grad {
+     /*// background-image: linear-gradient(#e66465, #9198e5);*/
     }
-
 </style>
