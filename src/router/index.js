@@ -3,13 +3,22 @@ import VueRouter from 'vue-router';
 import Main from '../pageviews/main';
 import home from '../pageviews/home';
 import addcomposition from '../pageviews/addcomposition';
+import cmap from './childRout';
 
 export const constantRouterMap = [
     {
-        path: '',
+        path: '/',
         //组件
         name: 'mian',
         component: home,
+        // children: cmap,
+        children: [
+            {
+                path: '/rrrrr',
+                name: 'mian',
+                component: Main,
+            }
+        ],
     },
     {
         path: '/writer',

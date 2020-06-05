@@ -1,8 +1,12 @@
 <template>
-    <div class="grad">
-        <Head/>
-        <router-view/>
-    </div>
+    <el-container>
+        <el-header class="nomp">
+            <Head/>
+        </el-header>
+        <el-main class="content" style="overflow:hidden">
+            <router-view/>
+        </el-main>
+    </el-container>
 </template>
 
 <script>
@@ -20,7 +24,17 @@
 </script>
 
 <style scoped>
-    .grad {
-     /*// background-image: linear-gradient(#e66465, #9198e5);*/
+    .nomp {
+        padding: 0;
+        margin: 0;
+    }
+
+    .content {
+        width: 100%;
+        text-align: center;
+        /*  background: #409EFF;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
