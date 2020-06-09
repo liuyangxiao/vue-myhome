@@ -6,6 +6,7 @@
         <el-main class="content" style="overflow:hidden">
             <router-view/>
         </el-main>
+        <el-footer>Footer</el-footer>
     </el-container>
 </template>
 
@@ -32,8 +33,8 @@
     .content {
         width: 100%;
         text-align: center;
-        /*  background: #409EFF;*/
         display: flex;
+        min-height: 520px;
         justify-content: center;
         align-items: center;
     }

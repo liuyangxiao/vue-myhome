@@ -1,16 +1,23 @@
 <template>
-    <el-row>
-        <el-col :span="12">
-                <span style="font-size:60px;color: #409EFF" class=" iconfont icon-zhuye_wodebaobei">
-                       <span style="font-size: 40px"> 😀</span>
-                    </span>
+    <el-row style="background:floralwhite;height: 100%;">
+        <el-col :span="8">
+            <div style="padding: 10px">
+                <img class="uimgr"
+                     src="https://upload.jianshu.io/users/upload_avatars/14717934/2ecead36-4542-4753-8ea8-5f51ede9d7f7?imageMogr2/auto-orient/strip|imageView2/1/w/80/h/80/format/webp"/>
+                <i style="font-weight: bolder">咻咻的知了 </i>
+            </div>
         </el-col>
-        <el-col :span="6">
-            <i style="font-size:60px;color: #409EFF;text-align: left;background: red" class="iconfont">&#xe691;</i>
-            <span style="font-size: 40px"> 粉</span>
+        <el-col :span="8">
+            <div style="height: 100%;text-align: center;margin-top: 20px">
+                <span style="font-weight: bolder;size: A3;">
+                    title标题
+                </span>
+            </div>
         </el-col>
-        <el-col :span="6" style="text-align: right;background: red">
-            <span style="font-size: 40px;">😀</span>
+        <el-col :span="8" style="height: 100%;text-align: right">
+            <div style="height: 100%;padding: 10px;">
+                <el-button style="font-weight: bolder;top: 50%" round type="danger">内容添加</el-button>
+            </div>
         </el-col>
     </el-row>
 </template>
@@ -22,6 +29,13 @@
 </script>
 
 <style scoped>
+    .uimgr {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 4px;
+    }
+
     @font-face {
         font-family: 'iconfont';  /* project id 1857815 */
         src: url('//at.alicdn.com/t/font_1857815_doylxn3ef9b.eot');
