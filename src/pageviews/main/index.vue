@@ -30,10 +30,10 @@
                 </p>
                 <!--https://www.58pic.com/newpic/34805887.html -->
                 <span>
-                    可靠的你
+                    可靠的迪
                 </span>
                 <p>
-                    璀璨 的你
+                    璀璨 的点
                 </p>
             </div>
             <div style="height: 80px;background:whitesmoke">
