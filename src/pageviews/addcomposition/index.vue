@@ -26,7 +26,10 @@
     import cataloglist from './CatalogList'
 
     export default {
-        name: "index",
+        name: "addcomposition",
+        mounted() {
+
+        },
         components: {
             cataloglist,
         }

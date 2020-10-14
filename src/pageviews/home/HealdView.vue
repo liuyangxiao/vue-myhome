@@ -16,7 +16,10 @@
         </el-col>
         <el-col :span="8" style="height: 100%;text-align: right">
             <div style="height: 100%;padding: 10px;">
-                <el-button style="font-weight: bolder;top: 50%" round type="danger">内容添加</el-button>
+                <el-button
+                        @click="addlistRout"
+                        style="font-weight: bolder;top: 50%" round type="danger">内容添加
+                </el-button>
             </div>
         </el-col>
     </el-row>
@@ -24,7 +27,7 @@
 
 <script>
     export default {
-        name: "HealdView"
+        name: "HealdView",
     }
 </script>
 

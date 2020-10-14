@@ -6,9 +6,13 @@
 </template>
 
 <script>
+    // import {getFileByindex} from '../src/router/RoutUtils'
 
     export default {
         name: 'App',
+        mounted() {
+            // getFileByindex('@/pageviews/')
+        },
     }
 </script>
 
@@ -16,6 +20,8 @@
     body {
         margin: 0;
         padding: 0;
-        background: url("https://csdnimg.cn/release/phoenix/template/themes_skin/skin-blackboard/images/bg.jpg");
+    /*    background-image: url("assets/mybg.jpg");*/
+        /*   background-color: red;*/
+        /* background-image: url("@/assets/mybg.jpg");*/
     }
 </style>

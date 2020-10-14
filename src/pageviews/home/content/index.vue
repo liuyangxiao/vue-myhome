@@ -48,7 +48,8 @@
 
 <script>
     export default {
-        name: "index"
+        name: "huser",
+        testPath: "main",
     }
 </script>
 

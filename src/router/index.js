@@ -1,59 +1,35 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Main from '../pageviews/main';
+import VueRouter, {RouteConfig} from 'vue-router';
 import home from '../pageviews/home';
-import addcomposition from '../pageviews/addcomposition';
-import cmap from './childRout';
+import {getFileByindex} from '../router/RoutUtils'
 
 export const constantRouterMap = [
     {
         path: '/',
         //组件
-        name: 'mian',
+        name: 'mian111',
         component: home,
-        // children: cmap,
-        children: [
-            {
-                path: '/rrrrr',
-                name: 'mian',
-                component: Main,
-            }
-        ],
+        meta: {
+            testStr: '测试---内容----testStr----',
+        },
     },
-    {
-        path: '/writer',
-        //组件
-        name: 'mian',
-        component: addcomposition,
-    },
-
-    {
-        path: '/foo',
-        //组件
-        name: 'mian',
-        component: Main,
-        children: [
-            {
-                //字路由地址含父地址 独立存在
-                path: '/foo/ddd',
-                //组件
-                name: 'mian',
-                component: Main,
-                children: [
-                    {
-                        path: '/foo/ddd/ccc',
-                        //组件
-                        name: 'mian',
-                        component: Main,
-                    }
-                ]
-            }
-        ],
-    },
+    {path: '*', redirect: '/404', hidden: true}
 ]
 
 const router = new VueRouter({
-    routes: constantRouterMap // (缩写) 相当于 routes: routes
+    routes: constantRouterMap
 })
+router.beforeEach((to, from, next) => {
+    let toPath = to.path;
+    if (toPath.indexOf("cc") !== -1) {
+        toPath = to.path.replace("//", "/")
+        //  next('')
+    } else {
+        next()
+        // next('/Personinfo')
+    }
+
+})
+router.addRoutes(getFileByindex());
 Vue.use(VueRouter);
 export default router;
