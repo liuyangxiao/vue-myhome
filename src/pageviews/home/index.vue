@@ -7,7 +7,7 @@
             <router-view/>
         </el-main>
         <el-footer>
-            ==================================={{ testNNN()}}===================================
+            底下的东西
         </el-footer>
     </el-container>
 </template>
